@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <title>Display All Records</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+<h1>All Books Displayed Report</h1>
+
+<table>
+
+    <tr>
+        <td><p>Task Title</p></td>
+        <td><p>Task Details</p></td>
+        <td><p>Priority:</p></td>
+        <td><p>StartDate</p></td>
+        <td><p>EndDate</p></td>
+     \
+    </tr>
+
+
+    <th:block th:each="tasks:${tasksz}">
+        <tr>
+            <td><p th:text="${tasks.Name}"/></td>
+            <td><p th:text="${tasks.Emailaddress}"/></td>
+            <td><p th:text="${tasks.Organization}"/></td>
+            <td><p th:text="${tasks.StartDate}"/></td>
+            <td><p th:text="${tasks.EndDate}"/></td>
+
+        </tr>
+    </th:block>
+</table>
+
+<a href="/addemployment">Add another employee</a>
+</body>
+</html>

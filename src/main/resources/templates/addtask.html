@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add New Task</title>
+
+</head>
+
+<body>
+<h1>it works</h1>
+
+<form action="#" th:action="@{/addtask}" th:object="${addtasksPage}" method="post">
+
+
+    <p>Task Title: <input type="text" th:field="*{toDoTaskTitle}"/></p>
+    <p>Task Details: <input type="text" th:field="*{toDoTaskDetails}"/></p>
+    <p>Priority: <input type="text" th:field="*{toDoTaskPriority}"/></p>
+    <p>Start Date: <input type="text" th:field="*{toDoTaskStartDate}"/></p>
+    <p>End Date: <input type="text" th:field="*{toDoTaskEndDate}"/></p>
+
+
+
+    <input type="submit" value="addtask"/>
+    <input type="reset" value="Reset"/>
+
+</form>
+
+</body>
+
+</html>

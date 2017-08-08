@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Task details</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+</head>
+<body>
+<h1>Task added successfully</h1>
+
+
+<p th:text="'Task Title: ' + ${newtask.toDoTaskTitle}"/>
+<p th:text="'Task Details: ' + ${newtask.toDoTaskDetails}"/>
+<p th:text="'Priority: ' + ${newtask.toDoTaskPriority}"/>
+<p th:text="'Start Date: ' + ${newtask.toDoTaskStartDate}"/>
+<p th:text="'End Date: ' + ${newtask.toDoTaskEndDate}"/>
+
+
+<a href="/addtask">Add another Task</a>
+<a href="/taskconfirmation">Display All Tasks</a>
+</body>
+</html>
